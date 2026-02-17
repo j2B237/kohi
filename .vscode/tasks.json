@@ -1,0 +1,52 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Everything (Debug)",
+            "command": "${workspaceFolder}/build-debug.sh",
+            "windows": {
+                "command": "${workspaceFolder}/build-debug.bat",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build Everything (Release)",
+            "command": "${workspaceFolder}/build-release.sh",
+            "windows": {
+                "command": "${workspaceFolder}/build-release.bat",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Clean Everything",
+            "command": "${workspaceFolder}/clean.sh",
+            "windows": {
+                "command": "${workspaceFolder}\\clean.bat",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build"
+        },
+    ],
+    "version": "2.0.0"
+}
